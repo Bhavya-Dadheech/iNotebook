@@ -1,4 +1,4 @@
-# News-Horizon(Class Component)
+# iNotebook
 
 iNotebook is a versatile and user-friendly application that allows you to take digital notes and organize your thoughts effectively. With iNotebook, you can create, edit, and save notes. iNotebook provides flexible organization options, allowing you to categorize and tag your notes for easy retrieval.
 
