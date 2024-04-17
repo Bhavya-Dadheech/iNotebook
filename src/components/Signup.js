@@ -18,9 +18,9 @@ export default function Signup({ showAlert }) {
     const response = await fetch(`${host}/signup`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name: credentials.name, email: credentials.email, password: credentials.password })
+      body: JSON.stringify({ name: credentials.name, email: credentials.email, password: credentials.password }),
     });
     const json = await response.json();
     if (json.success) {
@@ -31,9 +31,9 @@ export default function Signup({ showAlert }) {
   };
 
   return (
-    <>
+    <div className="m-auto" style={{ width: "30%" }}>
       <h1>Signup to iNotebook</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="d-flex flex-column ">
         <div className="mb-3">
           <label htmlFor="name" className="form-label">
             Name
@@ -97,10 +97,10 @@ export default function Signup({ showAlert }) {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="px-4 m-auto btn btn-primary">
           Signup
         </button>
       </form>
-    </>
+    </div>
   );
 }

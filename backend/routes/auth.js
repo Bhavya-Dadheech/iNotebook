@@ -13,7 +13,7 @@ router.post(
   [
     body("name", "Enter a valid name").isLength({ min: 3 }),
     body("email", "Enter a valid email").isEmail(),
-    body("password", "Password must be atleat 5 charachters").isLength({ min: 5 })
+    body("password", "Password must be atleat 5 charachters").isLength({ min: 5 }),
   ],
   async (req, res) => {
     const result = validationResult(req);
@@ -38,13 +38,13 @@ router.post(
         user = await User.create({
           name: req.body.name,
           email: req.body.email,
-          password: secPass
+          password: secPass,
         });
 
         const data = {
           user: {
-            id: user.id
-          }
+            id: user.id,
+          },
         };
 
         const authToken = jwt.sign(data, JWT_SECRET);
@@ -84,8 +84,8 @@ router.post(
 
       const data = {
         user: {
-          id: user.id
-        }
+          id: user.id,
+        },
       };
 
       const authToken = jwt.sign(data, JWT_SECRET);
@@ -100,7 +100,7 @@ router.post(
 // ROUTE 3: Get loggedin User Details using: POST "/api/auth/getuser". Login required
 router.post("/getuser", fetchUser, async (req, res) => {
   try {
-    userId = req.user.id;
+    let userId = req.user.id;
     const user = await User.findById(userId).select("-password");
     res.send(user);
   } catch (error) {

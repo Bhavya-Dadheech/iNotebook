@@ -1,7 +1,9 @@
 import React, { useContext, useState } from "react";
 import NoteContext from "../context/notes/NoteContext";
+import { useNavigate } from "react-router-dom";
 
 export default function AddNote({ showAlert }) {
+  const navigate = useNavigate();
   const context = useContext(NoteContext);
   const { addNote } = context;
   const [note, setNote] = useState({ title: "", description: "", tag: "" });
@@ -11,15 +13,16 @@ export default function AddNote({ showAlert }) {
     addNote(note);
     showAlert("Added successfully", "primary");
     setNote({ title: "", description: "", tag: "" });
+    navigate("/home");
   };
 
   const onChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value });
   };
   return (
-    <div className="my-2">
+    <div className="m-auto w-50">
       <h1>Add a Note.</h1>
-      <form onSubmit={handleAddNote}>
+      <form onSubmit={handleAddNote} className="d-flex flex-column ">
         <div className="mb-3">
           <label htmlFor="title" className="form-label">
             Title
@@ -70,7 +73,7 @@ export default function AddNote({ showAlert }) {
         </div>
         <button
           type="submit"
-          className={`btn btn-primary ${
+          className={`m-auto btn btn-primary ${
             note.title.length < 5 || note.description.length < 5 || note.tag.length < 5 ? "not-allowed" : ""
           }`}
           disabled={note.title.length < 5 || note.description.length < 5 || note.tag.length < 5}

@@ -1,25 +1,9 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
-import NoteContext from "../context/notes/NoteContext";
-import NoteItem from "./NoteItem";
-import { useNavigate } from "react-router-dom";
+import React, { useRef, useState } from "react";
 
-export default function Notes({ showAlert }) {
-  const navigate = useNavigate();
-  const context = useContext(NoteContext);
-  const { notes, getNotes, editNote } = context;
+export default function EditNote() {
   const ref = useRef(null);
   const refClose = useRef(null);
   const [note, setNote] = useState({ id: "", etitle: "", edescription: "", etag: "" });
-
-  useEffect(() => {
-    if (localStorage.getItem("token")) {
-      getNotes();
-    } else {
-      navigate("/login");
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   const updateNote = (currentNote) => {
     ref.current.click();
     setNote({
@@ -39,10 +23,8 @@ export default function Notes({ showAlert }) {
     refClose.current.click();
     showAlert("Updated successfully", "primary");
   };
-
   return (
-    <div>
-      {/* Edit Modal */}
+    <>
       <button
         type="button"
         className="d-none btn btn-primary"
@@ -134,40 +116,6 @@ export default function Notes({ showAlert }) {
           </div>
         </div>
       </div>
-
-      {/* List of notes using NoteItem Component */}
-      <div className="row my-2">
-        <h1>Your Notes.</h1>
-        {notes.length === 0 && (
-          <>
-            <div className="col-md-3 my-3">
-              <div className="card">
-                <div className="card-body text-center">
-                  <h5 className="card-title">No notes to display</h5>
-                </div>
-              </div>
-            </div>
-          </>
-        )}
-        {notes &&
-          notes.map((note) => {
-            return <NoteItem key={note._id} note={note} updateNote={updateNote} showAlert={showAlert} />;
-          })}
-        <div
-          className="col-md-1 my-3"
-          style={{ cursor: "pointer" }}
-          onClick={() => {
-            navigate("/add-note");
-          }}
-        >
-          <div
-            className="d-flex flex-column bg-white rounded border text-center justify-content-center"
-            style={{ height: "100%" }}
-          >
-            <h3>+</h3>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 }

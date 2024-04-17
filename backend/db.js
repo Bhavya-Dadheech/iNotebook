@@ -2,9 +2,10 @@ const mongoose = require("mongoose");
 
 const mongoURI = "mongodb://localhost:27017/INotebook";
 
-const connectToMongo = () => {
-  mongoose
-    .connect(mongoURI)
+const connectToMongoOpt = async () => {
+  const options = { maxPoolSize: 10, useNewUrlParser: true, useUnifiedTopology: true };
+  await mongoose
+    .connect(mongoURI, options)
     .then((res) => {
       console.log("Connected To Mongo successfully");
     })
@@ -14,4 +15,4 @@ const connectToMongo = () => {
     });
 };
 
-module.exports = connectToMongo;
+module.exports = connectToMongoOpt;

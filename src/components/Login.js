@@ -15,9 +15,9 @@ export default function Login({ showAlert }) {
     const response = await fetch(`${host}/login`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email: credentials.email, password: credentials.password })
+      body: JSON.stringify({ email: credentials.email, password: credentials.password }),
     });
     const json = await response.json();
     if (json.success) {
@@ -31,9 +31,9 @@ export default function Login({ showAlert }) {
   };
 
   return (
-    <>
+    <div className="m-auto" style={{ width: "30%" }}>
       <h1>Login to iNotebook</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="d-flex flex-column ">
         <div className="mb-3">
           <label htmlFor="email" className="form-label">
             Email address
@@ -65,10 +65,10 @@ export default function Login({ showAlert }) {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="px-4 m-auto btn btn-primary">
           Login
         </button>
       </form>
-    </>
+    </div>
   );
 }
