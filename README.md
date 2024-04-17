@@ -12,7 +12,7 @@ To run the web application locally, you need to install Node.js and mongodb comp
  
  3.Setup mongodb compass and create a schema named INotebook.
     
- 4.Now run the below command and you are god to go.
+ 4.Now run the below command and you are good to go.
      
      npm run inotebook
 
