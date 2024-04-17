@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# News-Horizon(Class Component)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+iNotebook is a versatile and user-friendly application that allows you to take digital notes and organize your thoughts effectively. With iNotebook, you can create, edit, and save notes. iNotebook provides flexible organization options, allowing you to categorize and tag your notes for easy retrieval.
 
-## Available Scripts
+# Installation
 
-In the project directory, you can run:
+To run the web application locally, you need to install Node.js and mongodb compass on your device. Once installed, follow these steps:
+ 
+ 1.Clone the repository: git clone https://github.com/Bhavya-Dadheech/iNotebook.git
+ 
+ 2.Run npm install in the root directory, change the directory to backend and run npm install there also.
+ 
+ 3.Setup mongodb compass and create a schema named INotebook.
+    
+ 4.Now run the below command and you are god to go.
+     
+     npm run inotebook
 
-### `npm start`
+ 5.iNotebook is now running on localhost.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Tech Stack Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![javascript (2)](https://github.com/Bhavya-Dadheech/TextUtils/assets/70031238/378bd702-6ff9-4479-b7cd-c5ad79200408)
+![css](https://github.com/Bhavya-Dadheech/TextUtils/assets/70031238/e78dc152-9a55-41fb-8fcb-c2686fdbb39b)
+![html](https://github.com/Bhavya-Dadheech/TextUtils/assets/70031238/427b56e8-8be5-46c5-bbab-1e23e4d4cda0)
+![react](https://github.com/Bhavya-Dadheech/TextUtils/assets/70031238/43149fb8-6449-4403-940e-ce62b7c38d14)
+![bootstrap](https://github.com/Bhavya-Dadheech/TextUtils/assets/70031238/b0e3f3df-e857-498a-ad96-5625aff042f7)
+![node-js](https://github.com/Bhavya-Dadheech/iNotebook/assets/70031238/bf653eb8-6a4d-4870-9f8d-0279e65c5c25)
+![mongodb](https://github.com/Bhavya-Dadheech/iNotebook/assets/70031238/ea0f7b5c-d540-45a5-bacf-d7d09cc789ba)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Preview
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Contributions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Contributions to iNOtebook are welcome! If you encounter any bugs or issues or have ideas for improvements, please open an issue on the repository. Pull requests with enhancements are also appreciated.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+(If you liked the project, give it a star 😃)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
