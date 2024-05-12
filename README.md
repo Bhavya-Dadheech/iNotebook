@@ -28,9 +28,8 @@ To run the web application locally, you need to install Node.js and mongodb comp
 ![node-js](https://github.com/Bhavya-Dadheech/iNotebook/assets/70031238/bf653eb8-6a4d-4870-9f8d-0279e65c5c25)
 ![mongodb](https://github.com/Bhavya-Dadheech/iNotebook/assets/70031238/ea0f7b5c-d540-45a5-bacf-d7d09cc789ba)
 
-
 # Preview
-
+https://github.com/Bhavya-Dadheech/iNotebook/assets/70031238/04c7adcd-46cd-46e3-8678-f9ae21194f20
 
 # Contributions
 
